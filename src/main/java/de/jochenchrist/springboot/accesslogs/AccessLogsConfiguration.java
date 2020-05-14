@@ -1,8 +1,6 @@
 package de.jochenchrist.springboot.accesslogs;
 
 import ch.qos.logback.access.tomcat.LogbackValve;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnCloudPlatform;
-import org.springframework.boot.cloud.CloudPlatform;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
