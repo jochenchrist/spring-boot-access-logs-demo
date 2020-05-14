@@ -1,0 +1,29 @@
+<configuration debug="false">
+  <appender name="accessJsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="net.logstash.logback.encoder.AccessEventCompositeJsonEncoder">
+      <providers>
+        <timestamp />
+        <pattern>
+          <pattern>
+            {
+            "@version" : "1",
+            "@type" : "access",
+            "client-host" : "%clientHost",
+            "remote-user" : "%user",
+            "request-message" : "%requestMethod",
+            "request-url" : "%requestURL",
+            "request-uri" : "%requestURI",
+            "status-code" : "#asLong{%statusCode}" ,
+            "bytes-sent" : "#asLong{%bytesSent}",
+            "elapsed-time" : "#asLong{%elapsedTime}",
+            "message" : "%requestURL %statusCode"
+            }
+          </pattern>
+        </pattern>
+      </providers>
+    </encoder>
+  </appender>
+  ​
+  <appender-ref ref="accessJsonConsoleAppender" />
+  ​
+</configuration>
