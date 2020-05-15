@@ -88,3 +88,7 @@ Configure it to use the `AccessEventCompositeJsonEncoder` with your desired JSON
   ​
 </configuration>
 ```
+
+## Credits
+
+Thanks to my colleagues Martin Eigenbrodt for the concept and Timo Loist for pointing me to this solution.
