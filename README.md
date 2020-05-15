@@ -10,7 +10,7 @@ This demo shows how to configure Spring Boot 2 to write access logs to console a
 
 ## Example
 
-```
+```json
 {"@timestamp":"2020-05-14T22:12:33.780+02:00","@version":"1","message":"This is a normal log statement: bar","logger_name":"de.jochenchrist.springboot.accesslogs.FooController","thread_name":"http-nio-8080-exec-1","level":"INFO","level_value":20000,"foo":"bar"}
 {"@timestamp":"2020-05-14T22:12:33.836+02:00","@version":"1","@type":"access","client-host":"0:0:0:0:0:0:0:1","remote-user":"-","request-message":"GET","request-url":"GET / HTTP/1.1","request-uri":"/","status-code":200,"bytes-sent":3,"elapsed-time":164,"message":"GET / HTTP/1.1 200"}
 ```
