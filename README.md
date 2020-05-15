@@ -2,7 +2,7 @@
 
 How to enable Tomcat's access logs with Spring Boot and write them encoded as JSON to stdout.
 
-With Spring Boot, access logs can be enabled with `server.tomcat.accesslog.enabled`, but this writes the access logs to a temporary file.
+With Spring Boot, access logs could be enabled with `server.tomcat.accesslog.enabled`, but this writes the access logs to a temporary file.
 
 In a containerized or cloud-native environments, logs [are collected from stdout and forwarded to a log collector, such as Elasticsearch](https://www.innoq.com/de/blog/logging-mit-docker-und-elasticsearch/).
 
@@ -33,7 +33,7 @@ Add to your _pom.xml_:
 
 ## WebServerFactoryCustomizer
 
-Add a WebServerFactoryCustomizer, that adds the `LogbackValve` to the Tomcat WebServerFactory.
+Add a WebServerFactoryCustomizer, that adds the [LogbackValve](http://logback.qos.ch/access.html) to the WebServerFactory.
 The default filename for the logback configuration is `logback-access.xml`, which can be changed here.
 
 ```java
@@ -54,8 +54,8 @@ public class AccessLogsConfiguration {
 
 ## logback-access.xml
 
-Put a logback configuration file in _src/main/resources_ (probably next to your existing logback.xml for the Spring application).
-Configure it to use the `AccessEventCompositeJsonEncoder` with your desired JSON structure:
+Put the logback configuration file in _src/main/resources_ (probably next to your existing logback.xml for the Spring application).
+Configure it to use the [AccessEventCompositeJsonEncoder](https://github.com/logstash/logstash-logback-encoder/blob/master/src/main/java/net/logstash/logback/encoder/AccessEventCompositeJsonEncoder.java) (provided by [Logstash Logback Encoder](https://github.com/logstash/logstash-logback-encoder)) with your desired JSON structure:
 
 ```xml
 <configuration debug="false">
