@@ -91,4 +91,4 @@ Configure it to use the `AccessEventCompositeJsonEncoder` with your desired JSON
 
 ## Credits
 
-Thanks to my colleagues Martin Eigenbrodt for the concept and Timo Loist for pointing me to this solution.
+Thanks to my colleagues [Martin Eigenbrodt](https://www.innoq.com/en/staff/martin-eigenbrodt/) for the initial concept and [Timo Loist](https://www.innoq.com/en/staff/timo-loist/) for pointing me to this solution.
